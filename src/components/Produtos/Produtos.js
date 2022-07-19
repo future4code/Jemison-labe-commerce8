@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import lista from "../MockDados/MockDados";
 import Cards from "../Card/Card";
 import "../Styles/Produtos.css";

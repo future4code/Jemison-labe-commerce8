@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Produtos from "./components/Produtos/Produtos";
 import Navbar from "./components/Navbar/Navbar";
 import Carrinho from "./components/Carrinho/Carrinho";
@@ -22,8 +22,8 @@ const App = () => {
   };
 
   // useEffect(() => {
-  //   console.log("carrinho");
-  // }, [carrinho]);
+   // console.log("carrinho");
+   //}, [carrinho]);
 
   return (
     <React.Fragment>
