@@ -10,8 +10,8 @@ const Cards = ({ item, handleClick }) => {
       <div className="descricao">
         <p>{id}</p>
         <p>{nome}</p>
-        <p>Preço - {preco}R$</p>
-        <button onClick={() => handleClick(item)}>Adicionar ao carrinho</button>
+        <p>R$ - {preco},00</p>
+        <button onClick={() => handleClick(item)}>Add ao carrinho</button>
       </div>
     </div>
   );

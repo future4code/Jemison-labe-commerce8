@@ -41,7 +41,7 @@ const Carrinho = ({ carrinho, setCarrinho, handleChange }) => {
       ))}
       <div className="total">
         <span>Preço total do seu carrinho</span>
-        <span>R$ - {preco}</span>
+        <span>R$ - {preco},00</span>
       </div>
     </article>
   );

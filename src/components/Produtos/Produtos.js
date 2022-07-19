@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import lista from "./components/MockDados/MockDados";
-import Cards from "./components/Card/Card";
+import React from "react";
+import lista from "../MockDados/MockDados";
+import Cards from "../Card/Card";
 import "../Styles/Produtos.css";
 
-const Produto = ({ handleClick }) => {
+const Produtos = ({ handleClick }) => {
   return (
     <section>
       {lista.map((item) => (
@@ -13,4 +13,4 @@ const Produto = ({ handleClick }) => {
   );
 };
 
-export default Produto;
+export default Produtos;
