@@ -2,28 +2,28 @@ const lista = [
 
   {
     id: 1,
-    nome: "",
+    nome: "Imagem 1",
     preco: 123,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
   },
   {
     id: 2,
-    nome: "",
+    nome: "Imagem 2",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
   },
   {
     id: 3,
-    nome: "",
+    nome: "Imagem 3",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
   },
   {
     id: 4,
-    nome: "",
+    nome: "Imagem 4",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
@@ -31,7 +31,7 @@ const lista = [
   },
   {
     id: 5,
-    nome: "",
+    nome: "Imagem 5",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
@@ -39,7 +39,7 @@ const lista = [
   },
   {
     id: 6,
-    nome: "",
+    nome: "Imagem 6",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,

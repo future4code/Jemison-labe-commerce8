@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Produtos from "./components/Produtos/Produtos";
 import Navbar from "./components/Navbar/Navbar";
 import Carrinho from "./components/Carrinho/Carrinho";
@@ -20,10 +20,6 @@ const App = () => {
     if (car[escolher].qtd === 0) car[escolher].qtd = 1;
     setCarrinho([...car]);
   };
-
-  // useEffect(() => {
-  //   console.log("carrinho");
-  // }, [carrinho]);
 
   return (
     <React.Fragment>
