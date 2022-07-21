@@ -3,11 +3,17 @@ import lista from "../MockDados/MockDados";
 import Cards from "../Card/Card";
 import "../Styles/Produtos.css";
 
-const Produtos = ({ handleClick }) => {
+const Produtos = (props) => {
   return (
     <section>
-      {lista.map((item) => (
-        <Cards key={item.id} item={item} handleClick={handleClick} />
+      {lista.filter((item)=>{
+          return item.nome.includes(props.inputNome)
+        }).filter((item)=>{
+          return item.preco >= props.inputMinValor
+        }).filter((item)=>{
+          return item.preco <= props.inputMaxValor
+        }).map((item) => (
+        <Cards key={item.id} item={item} handleClick={props.handleClick} />
       ))}
     </section>
   );

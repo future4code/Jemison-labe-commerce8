@@ -2,28 +2,28 @@ const lista = [
 
   {
     id: 1,
-    nome: "",
+    nome: "Mercúrio",
     preco: 123,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
   },
   {
     id: 2,
-    nome: "",
+    nome: "Vênus",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
   },
   {
     id: 3,
-    nome: "",
+    nome: "Marte",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
   },
   {
     id: 4,
-    nome: "",
+    nome: "Jupiter",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
@@ -31,7 +31,7 @@ const lista = [
   },
   {
     id: 5,
-    nome: "",
+    nome: "Saturno",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
@@ -39,7 +39,7 @@ const lista = [
   },
   {
     id: 6,
-    nome: "",
+    nome: "Urano",
     preco: 89,
     foto: "https://static.preparaenem.com/2022/06/lua.jpg",
     qtd: 1,
