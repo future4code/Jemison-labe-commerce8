@@ -1,11 +1,11 @@
 import React from "react";
 import lista from "../MockDados/MockDados";
 import Cards from "../Card/Card";
-import "../Styles/Produtos.css";
+import { ContPai } from "./styled";
 
 const Produtos = (props) => {
   return (
-    <section>
+    <ContPai>
       {lista.filter((item)=>{
           return item.nome.includes(props.inputNome)
         }).filter((item)=>{
@@ -15,7 +15,7 @@ const Produtos = (props) => {
         }).map((item) => (
         <Cards key={item.id} item={item} handleClick={props.handleClick} />
       ))}
-    </section>
+    </ContPai>
   );
 };
 

@@ -42,10 +42,6 @@ const App = () => {
     setCarrinho([...car]);
   };
 
-  // useEffect(() => {
-   // console.log("carrinho");
-   //}, [carrinho]);
-
   return (
     <React.Fragment>
       <Navbar setCompra={setCompra} size={carrinho.length} />

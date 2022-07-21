@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "../Styles/Carrinho.css";
+// import "../Styles/Carrinho.css";
+import { BotaoAddItem, ContePai, ImagemItens, Itens, NomeItem, ImagemENome, Preco, Remover, FraseDoTotal, ValorTotal, ConteTotal } from "./styled";
+
 
 const Carrinho = ({ carrinho, setCarrinho, handleChange }) => {
   const [preco, setPreco] = useState(0);
 
-  const handleRemove = (id) => {
+  const handleRemover = (id) => {
     const car = carrinho.filter((item) => item.id !== id);
     setCarrinho(car);
     handlePreco();
@@ -21,29 +23,29 @@ const Carrinho = ({ carrinho, setCarrinho, handleChange }) => {
   });
 
   return (
-    <article>
+    <ContePai>
       {carrinho.map((item) => (
-        <div className="carrinho_box" key={item.id}>
-          <div className="carrinho_img">
-            <img src={item.foto} alt="" />
-            <p>{item.nome}</p>
+        <Itens key={item.id}>
+          <ImagemENome>
+            <ImagemItens src={item.foto} alt="" />
+            <NomeItem>{item.nome}</NomeItem>
+          </ImagemENome>
+          <div>
+            <BotaoAddItem onClick={() => handleChange(item, 1)}>+</BotaoAddItem>
+            <BotaoAddItem>{item.qtd}</BotaoAddItem>
+            <BotaoAddItem onClick={() => handleChange(item, -1)}>-</BotaoAddItem>
           </div>
           <div>
-            <button onClick={() => handleChange(item, 1)}>+</button>
-            <button>{item.qtd}</button>
-            <button onClick={() => handleChange(item, -1)}>-</button>
+            <Preco>R${item.preco},00</Preco>
+            <Remover onClick={() => handleRemover(item.id)}>Remover</Remover>
           </div>
-          <div>
-            <span>{item.preco}</span>
-            <button onClick={() => handleRemove(item.id)}>Remover</button>
-          </div>
-        </div>
+        </Itens>
       ))}
-      <div className="total">
-        <span>Preço total do seu carrinho</span>
-        <span>R$ - {preco},00</span>
-      </div>
-    </article>
+      <ConteTotal>
+        <FraseDoTotal>Preço total do seu carrinho</FraseDoTotal>
+        <ValorTotal>R${preco},00</ValorTotal>
+      </ConteTotal>
+    </ContePai>
   );
 };
 

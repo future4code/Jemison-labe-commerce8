@@ -1,19 +1,20 @@
 import React from "react";
+import { Cardes, BotaoCard, Preco, Identificacao, Image, Nome } from "./styled";
 
 const Cards = ({ item, handleClick }) => {
-  const { id, nome, preco, foto } = item;
+  const { id, preco, foto, nome } = item;
   return (
-    <div className="cards">
-      <div className="image_box">
-        <img src={foto} alt="" />
+    <Cardes>
+      <div>
+        <Image src={foto} alt="" />
       </div>
-      <div className="descricao">
-        <p>{id}</p>
-        <p>{nome}</p>
-        <p>R$ - {preco},00</p>
-        <button onClick={() => handleClick(item)}>Add ao carrinho</button>
+      <div>
+        <Identificacao>{id}</Identificacao>
+        <Nome>{nome}</Nome>
+        <Preco>R$ {preco},00</Preco>
+        <BotaoCard onClick={() => handleClick(item)}>Adicionar ao carrinho</BotaoCard>
       </div>
-    </div>
+    </Cardes>
   );
 };
 
