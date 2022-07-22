@@ -12,7 +12,7 @@ const Cards = ({ item, handleClick }) => {
         <Tag>
         <Identificacao>{id}</Identificacao>
         <Nome>{nome}</Nome>
-        <Preco>R$ {preco},00</Preco>
+        <Preco>R${preco}</Preco>
         </Tag>
         <BotaoCard onClick={() => handleClick(item)}>Adicionar ao carrinho</BotaoCard>
       </Flex>
