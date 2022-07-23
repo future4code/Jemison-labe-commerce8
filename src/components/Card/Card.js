@@ -13,6 +13,7 @@ const Cards = ({ item, handleClick }) => {
         <Nome>{nome}</Nome>
         <Preco>R$ {preco},00</Preco>
         <BotaoCard onClick={() => handleClick(item)}>Adicionar ao carrinho</BotaoCard>
+
       </div>
     </Cardes>
   );
