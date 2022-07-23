@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import Produtos from "./components/Produtos/Produtos";
 import Navbar from "./components/Navbar/Navbar";
 import Carrinho from "./components/Carrinho/Carrinho";
 import { Filtro } from "./components/Filtro/Filtro";
 import lista from "./components/MockDados/MockDados";
+
+const carrinhoLocal = JSON.parse(localStorage.getItem('carrinho') || '[] ')
 
 const App = () => {
   // código pertencente ao componente Filtro começa aqui
@@ -26,7 +28,12 @@ const App = () => {
   // código pertencente ao componente Filtro termina aqui
 
   const [compra, setCompra] = useState(true);
-  const [carrinho, setCarrinho] = useState([]);
+  const [carrinho, setCarrinho] = useState(carrinhoLocal);
+
+  useEffect(() => {
+    localStorage.setItem('carrinho', JSON.stringify(carrinho))
+  }, [carrinho])
+  
 
   const handleClick = (item) => {
     if (carrinho.indexOf(item) !== -1) return;
