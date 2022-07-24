@@ -12,19 +12,13 @@ const App = () => {
   const [inputNome, setInputNome] = useState('')
   const [inputMinValor, setInputMinValor] = useState(-Infinity)
   const [inputMaxValor, setInputMaxValor] = useState(Infinity)
+  const [order, setOrder] = useState(true)
 
-  const handleInputNome = (e) => {
-    setInputNome(e.target.value)
-  }
-
-  const handleInputMinValor = (e) => {
-    setInputMinValor(e.target.value)
-  }
-
-  const handleInputMaxValor = (e) => {
-    setInputMaxValor(e.target.value)
-  }
-
+  const handleInputNome = (e) => {setInputNome(e.target.value)}
+  const handleInputMinValor = (e) => {setInputMinValor(e.target.value)}
+  const handleInputMaxValor = (e) => {setInputMaxValor(e.target.value)}
+  const handleOrder = (e) => (setOrder(e.target.value))
+  
   // código pertencente ao componente Filtro termina aqui
 
   const [compra, setCompra] = useState(true);
@@ -52,7 +46,7 @@ const App = () => {
   return (
     <React.Fragment>
       <Navbar setCompra={setCompra} size={carrinho.length} />
-      <Filtro mockDeDados={lista} inputNome={inputNome} inputMinValor={inputMinValor} inputMaxValor={inputMaxValor} handleInputNome={handleInputNome} handleInputMinValor={handleInputMinValor} handleInputMaxValor={handleInputMaxValor}/>
+      <Filtro mockDeDados={lista} inputNome={inputNome} inputMinValor={inputMinValor} inputMaxValor={inputMaxValor} order={order} handleInputNome={handleInputNome} handleInputMinValor={handleInputMinValor} handleInputMaxValor={handleInputMaxValor} handleOrder={handleOrder}/>
       {compra ? (
         <Produtos inputNome={inputNome} inputMinValor={inputMinValor} inputMaxValor={inputMaxValor} handleClick={handleClick} />
       ) : (

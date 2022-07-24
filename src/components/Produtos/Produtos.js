@@ -12,7 +12,14 @@ const Produtos = (props) => {
           return item.preco >= props.inputMinValor || props.inputMinValor === ''
         }).filter((item)=>{
           return item.preco <= props.inputMaxValor || props.inputMaxValor === ''
-        }).map((item) => (
+        }).sort((c, n) => {return c.preco - n.preco}).sort(() => {
+          if (props.order) {
+            return 0
+          } else {
+            return -1
+          }
+        })
+        .map((item) => (
         <Cards key={item.id} item={item} handleClick={props.handleClick} />
       ))}
     </ContPai>

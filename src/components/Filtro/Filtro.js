@@ -72,6 +72,12 @@ export const Filtro = (props) => {
         <input type='number' value={props.inputMinValor} onChange={props.handleInputMinValor} placeholder='por Valor Mínimo'/>
         <label>Filtrar por Valor Máximo</label>
         <input type='number' value={props.inputMaxValor} onChange={props.handleInputMaxValor} placeholder='por Valor Máximo' />
+        <span>
+          <select value={props.order} onChange={props.handleOrder}>
+            <option value={true}>Crescente</option>
+            <option value={false}>Decrescente</option>
+          </select>
+        </span>
       </Formulario>
     </Conteiner>
   )
