@@ -6,7 +6,7 @@ const Navbar = ({ setCompra, size }) => {
 
       <Cabecalho>
         <NomeDoSite onClick={() => setCompra(true)}>
-          E-commerce
+          [AstroHouse] Viagens
         </NomeDoSite>
         <Carrinho onClick={() => setCompra(false)}>
           <span>
