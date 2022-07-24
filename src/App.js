@@ -12,7 +12,7 @@ const App = () => {
   const [inputNome, setInputNome] = useState('')
   const [inputMinValor, setInputMinValor] = useState(-Infinity)
   const [inputMaxValor, setInputMaxValor] = useState(Infinity)
-  const [order, setOrder] = useState(true)
+  const [order, setOrder] = useState('default')
 
   const handleInputNome = (e) => {setInputNome(e.target.value)}
   const handleInputMinValor = (e) => {setInputMinValor(e.target.value)}

@@ -12,8 +12,8 @@ const Produtos = (props) => {
           return item.preco >= props.inputMinValor || props.inputMinValor === ''
         }).filter((item)=>{
           return item.preco <= props.inputMaxValor || props.inputMaxValor === ''
-        }).sort((c, n) => {return c.preco - n.preco}).sort(() => {
-          if (props.order) {
+        }).sort(() => {
+          if (props.order === 'asc') {
             return 0
           } else {
             return -1
