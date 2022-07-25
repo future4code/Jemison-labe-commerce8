@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContePai = styled.div`
 width: 60%;
-margin: auto;
+margin: 10vh auto 0 auto;
 `
 
 export const Itens = styled.div`
@@ -20,8 +20,9 @@ width: 400px;
 `
 
 export const ImagemItens = styled.img`
-width: 50px;
-height: 50px;
+width: 75px;
+border-radius: 10px;
+// height: ;
 `
 
 export const NomeItem = styled.p`

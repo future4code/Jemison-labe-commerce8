@@ -9,9 +9,9 @@ const Produtos = (props) => {
       {lista.filter((item)=>{
           return item.nome.includes(props.inputNome)
         }).filter((item)=>{
-          return item.preco >= props.inputMinValor
+          return item.preco >= props.inputMinValor || props.inputMinValor === ''
         }).filter((item)=>{
-          return item.preco <= props.inputMaxValor
+          return item.preco <= props.inputMaxValor || props.inputMaxValor === ''
         }).sort((inicio, fim)=>{
           switch (props.ordenacao){
             case 'decrescente':

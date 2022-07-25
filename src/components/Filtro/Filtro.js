@@ -8,6 +8,7 @@ const Conteiner = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2vh 0;
 `;
 
 const Titulo = styled.h3`
@@ -42,6 +43,10 @@ const Formulario = styled.form`
     cursor: pointer;
   }
 
+  input[type=number]{
+    -moz-appearance: textfield;
+};
+
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -59,7 +64,13 @@ const Formulario = styled.form`
     border: 2px solid #87ceeb;
     cursor: pointer;
   }
-`;
+
+  input:focus {
+    border: 2px solid #87ceeb;
+    outline: none;
+
+  }
+`
 
 
 export const Filtro = (props) => {

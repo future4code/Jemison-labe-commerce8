@@ -1,5 +1,5 @@
 import React from "react";
-import { Cardes, BotaoCard, Preco, Identificacao, Image, Nome } from "./styled";
+import { Cardes, BotaoCard, Preco, Identificacao, Image, Nome, Tag, Flex } from "./styled";
 
 const Cards = ({ item, handleClick }) => {
   const { id, preco, foto, nome } = item;
@@ -8,13 +8,14 @@ const Cards = ({ item, handleClick }) => {
       <div>
         <Image src={foto} alt="" />
       </div>
-      <div>
+      <Flex>
+        <Tag>
         <Identificacao>{id}</Identificacao>
         <Nome>{nome}</Nome>
-        <Preco>R$ {preco},00</Preco>
+        <Preco>R${preco}</Preco>
+        </Tag>
         <BotaoCard onClick={() => handleClick(item)}>Adicionar ao carrinho</BotaoCard>
-
-      </div>
+      </Flex>
     </Cardes>
   );
 };
