@@ -12,14 +12,15 @@ const Produtos = (props) => {
           return item.preco >= props.inputMinValor || props.inputMinValor === ''
         }).filter((item)=>{
           return item.preco <= props.inputMaxValor || props.inputMaxValor === ''
-        }).sort(() => {
-          if (props.order === 'asc') {
-            return 0
-          } else {
-            return -1
+        }).sort((inicio, fim)=>{
+          switch (props.ordenacao){
+            case 'decrescente':
+              return inicio.preco - fim.preco
+            case 'crescente':
+              return fim.preco - inicio.preco
+            default:
           }
-        })
-        .map((item) => (
+        }).map((item) => (
         <Cards key={item.id} item={item} handleClick={props.handleClick} />
       ))}
     </ContPai>

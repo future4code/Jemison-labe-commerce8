@@ -12,6 +12,7 @@ const lista = [
     nome: "Viagem para Vênus",
     preco: 22000,
     foto: "https://static01.nyt.com/images/2020/09/14/science/14SCI-VENUS1-alt/14SCI-VENUS1-alt-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+
     qtd: 1,
   },
   {

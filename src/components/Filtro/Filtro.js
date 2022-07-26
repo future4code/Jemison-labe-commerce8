@@ -53,9 +53,22 @@ const Formulario = styled.form`
   margin: 0;
   }
 
+  select{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin: 1vw 0vw 0vw 0vw;
+  }
+
+  select:hover{
+    border: 2px solid #87ceeb;
+    cursor: pointer;
+  }
+
   input:focus {
     border: 2px solid #87ceeb;
     outline: none;
+
   }
 
   span select {
@@ -79,6 +92,7 @@ const Formulario = styled.form`
 `;
 
 
+
 export const Filtro = (props) => {
 
   return (
@@ -91,14 +105,15 @@ export const Filtro = (props) => {
         <input type='number' value={props.inputMinValor} onChange={props.handleInputMinValor} placeholder='por Valor Mínimo'/>
         <label>Filtrar por Valor Máximo</label>
         <input type='number' value={props.inputMaxValor} onChange={props.handleInputMaxValor} placeholder='por Valor Máximo' />
-        <span>
-          <label>Ordenar por:</label>
-          <select value={props.order} onChange={props.handleOrder}>
-            <option value={'default'} disabled>Ordenar por:</option>
-            <option value={'asc'}>Crescente</option>
-            <option value={'desc'}>Decrescente</option>
-          </select>
-        </span>
+        <select
+        nome='ordenacao'
+        value={props.ordenacao}
+        onChange = {props.handleOrdenacao}
+        >
+          <option value={'crescente'}>Crescente</option>
+          <option value={'decrescente'}>Decrescente</option>
+        </select>
+
       </Formulario>
     </Conteiner>
   )

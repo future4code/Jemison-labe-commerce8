@@ -12,13 +12,25 @@ const App = () => {
   const [inputNome, setInputNome] = useState('')
   const [inputMinValor, setInputMinValor] = useState(-Infinity)
   const [inputMaxValor, setInputMaxValor] = useState(Infinity)
-  const [order, setOrder] = useState('default')
 
-  const handleInputNome = (e) => {setInputNome(e.target.value)}
-  const handleInputMinValor = (e) => {setInputMinValor(e.target.value)}
-  const handleInputMaxValor = (e) => {setInputMaxValor(e.target.value)}
-  const handleOrder = (e) => (setOrder(e.target.value))
-  
+  const [ordenacao, setOrdenacao] = useState('title')
+
+  const handleInputNome = (e) => {
+    setInputNome(e.target.value)
+  }
+
+  const handleInputMinValor = (e) => {
+    setInputMinValor(e.target.value)
+  }
+
+  const handleInputMaxValor = (e) => {
+    setInputMaxValor(e.target.value)
+  }
+
+  const handleOrdenacao = (e) =>{
+    setOrdenacao(e.target.value)
+  }
+
   // código pertencente ao componente Filtro termina aqui
 
   const [compra, setCompra] = useState(true);
@@ -43,12 +55,17 @@ const App = () => {
     setCarrinho([...car]);
   };
 
+  // useEffect(() => {
+   // console.log("carrinho");
+   //}, [carrinho]);
+
   return (
     <React.Fragment>
       <Navbar setCompra={setCompra} size={carrinho.length} />
-      <Filtro mockDeDados={lista} inputNome={inputNome} inputMinValor={inputMinValor} inputMaxValor={inputMaxValor} order={order} handleInputNome={handleInputNome} handleInputMinValor={handleInputMinValor} handleInputMaxValor={handleInputMaxValor} handleOrder={handleOrder}/>
+      <Filtro mockDeDados={lista} inputNome={inputNome} inputMinValor={inputMinValor} inputMaxValor={inputMaxValor} handleOrdenacao={handleOrdenacao} handleInputNome={handleInputNome} handleInputMinValor={handleInputMinValor} handleInputMaxValor={handleInputMaxValor}/>
+
       {compra ? (
-        <Produtos inputNome={inputNome} inputMinValor={inputMinValor} inputMaxValor={inputMaxValor} handleClick={handleClick} />
+        <Produtos inputNome={inputNome} ordenacao={ordenacao} inputMinValor={inputMinValor} inputMaxValor={inputMaxValor} handleClick={handleClick} />
       ) : (
         <Carrinho carrinho={carrinho} setCarrinho={setCarrinho} handleChange={handleChange} />
       )}
