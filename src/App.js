@@ -12,6 +12,7 @@ const App = () => {
   const [inputNome, setInputNome] = useState('')
   const [inputMinValor, setInputMinValor] = useState(-Infinity)
   const [inputMaxValor, setInputMaxValor] = useState(Infinity)
+
   const [ordenacao, setOrdenacao] = useState('title')
 
   const handleInputNome = (e) => {
@@ -62,6 +63,7 @@ const App = () => {
     <React.Fragment>
       <Navbar setCompra={setCompra} size={carrinho.length} />
       <Filtro mockDeDados={lista} inputNome={inputNome} inputMinValor={inputMinValor} inputMaxValor={inputMaxValor} handleOrdenacao={handleOrdenacao} handleInputNome={handleInputNome} handleInputMinValor={handleInputMinValor} handleInputMaxValor={handleInputMaxValor}/>
+
       {compra ? (
         <Produtos inputNome={inputNome} ordenacao={ordenacao} inputMinValor={inputMinValor} inputMaxValor={inputMaxValor} handleClick={handleClick} />
       ) : (

@@ -17,7 +17,7 @@ const Titulo = styled.h3`
 
 const Formulario = styled.form`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 10px;
 
   label {
@@ -70,7 +70,27 @@ const Formulario = styled.form`
     outline: none;
 
   }
-`
+
+  span select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    color: grey;
+    background-color: white;
+    width: 200px;
+  }
+
+  span select:hover {
+    border: 2px solid #87ceeb;
+    cursor: pointer;
+  }
+
+  span select:focus {
+    border: 2px solid #87ceeb;
+    outline: none;
+  }
+`;
+
 
 
 export const Filtro = (props) => {
@@ -93,6 +113,7 @@ export const Filtro = (props) => {
           <option value={'crescente'}>Crescente</option>
           <option value={'decrescente'}>Decrescente</option>
         </select>
+
       </Formulario>
     </Conteiner>
   )
